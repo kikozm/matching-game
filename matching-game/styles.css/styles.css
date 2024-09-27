@@ -1,0 +1,132 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    direction: rtl;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+#game-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.letters, .sounds {
+    width: 45%;
+    min-width: 300px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.item, .drop-zone {
+    width: 120px;
+    height: 120px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: grab;
+    font-size: 3em;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.item.dragging {
+    opacity: 0.5;
+}
+
+.drop-zone {
+    border: 2px dashed #aaa;
+}
+
+.drop-zone.over {
+    border-color: #333;
+    background-color: #e0e0e0;
+}
+
+.matched {
+    border: 2px solid green;
+    background-color: #d4edda;
+    cursor: default;
+}
+
+#feedback {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: green;
+}
+
+/* הוספת צבעים וצורות מותאמות לכל אות */
+
+.item[data-sound="א"] {
+    background-color: #FFCDD2; /* אדום בהיר */
+    border-radius: 50%; /* עיגול */
+}
+
+.drop-zone[data-sound="א"] {
+    background-color: #FFCDD2;
+}
+
+.item[data-sound="ב"] {
+    background-color: #C8E6C9; /* ירוק בהיר */
+    border-radius: 0; /* ריבוע */
+}
+
+.drop-zone[data-sound="ב"] {
+    background-color: #C8E6C9;
+}
+
+.item[data-sound="ג"] {
+    background-color: #BBDEFB; /* כחול בהיר */
+    border-radius: 10px; /* פינות מעוגלות */
+}
+
+.drop-zone[data-sound="ג"] {
+    background-color: #BBDEFB;
+}
+
+.item[data-sound="ד"] {
+    background-color: #FFF9C4; /* צהוב בהיר */
+    border-radius: 20px; /* צורה מעוגלת יותר */
+}
+
+.drop-zone[data-sound="ד"] {
+    background-color: #FFF9C4;
+}
+
+.item[data-sound="ה"] {
+    background-color: #D1C4E9; /* סגול בהיר */
+    border-radius: 5px; /* פינות מעט מעוגלות */
+}
+
+.drop-zone[data-sound="ה"] {
+    background-color: #D1C4E9;
+}
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.matched {
+    border: 2px solid green;
+    background-color: #d4edda;
+    cursor: default;
+    animation: pop 0.3s ease-in-out;
+}

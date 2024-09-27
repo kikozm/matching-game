@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>התאמת צורות וצלילים</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>התאמת צורות וצלילים</h1>
+    <div id="game-container">
+        <div class="letters">
+            <h2>אותיות</h2>
+            <div class="item" draggable="true" data-sound="א">
+                א
+            </div>
+            <div class="item" draggable="true" data-sound="ב">
+                ב
+            </div>
+            <div class="item" draggable="true" data-sound="ג">
+                ג
+            </div>
+            <div class="item" draggable="true" data-sound="ד">
+                ד
+            </div>
+            <div class="item" draggable="true" data-sound="ה">
+                ה
+            </div>
+            <!-- ניתן להוסיף עוד אותיות כאן -->
+        </div>
+        <div class="sounds">
+            <h2>צלילים</h2>
+            <div class="drop-zone" data-sound="א">
+                <span>א</span>
+            </div>
+            <div class="drop-zone" data-sound="ב">
+                <span>ב</span>
+            </div>
+            <div class="drop-zone" data-sound="ג">
+                <span>ג</span>
+            </div>
+            <div class="drop-zone" data-sound="ד">
+                <span>ד</span>
+            </div>
+            <div class="drop-zone" data-sound="ה">
+                <span>ה</span>
+            </div>
+            <!-- ניתן להוסיף עוד צלילים כאן -->
+        </div>
+    </div>
+    <div id="feedback"></div>
+
+    <!-- קבצי שמע -->
+    <audio id="success-sound" src="assets/success.mp3"></audio>
+    <audio id="error-sound" src="assets/error.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
